@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - Wall
   - Enemy Bullet
+  - Disappear Wall
   layers:
   - Default
   - TransparentFX

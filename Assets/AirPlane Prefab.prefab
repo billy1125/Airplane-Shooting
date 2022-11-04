@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 5174054862221776420}
   - component: {fileID: 5174054862221776475}
   - component: {fileID: 5174054862221776474}
+  - component: {fileID: 6689639438377864768}
   m_Layer: 0
   m_Name: AirPlane Prefab
   m_TagString: Player
@@ -132,7 +133,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.36
+  m_Radius: 0.2
 --- !u!50 &5174054862221776475
 Rigidbody2D:
   serializedVersion: 4
@@ -166,8 +167,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6b36e176b08fc408a4da1534b50466, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MoveSpeed: 3
+  TiltAngle: 5
+  LifeAmount: 1
   BulletPrefab: {fileID: 6855807310743788365, guid: aca56614bf584b34692d4202ab4a459c, type: 3}
   ExplosionPrefab: {fileID: 1895478648524363357, guid: a469b718b6edeee46a80be90411d4916, type: 3}
+--- !u!95 &6689639438377864768
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5174054862221776473}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b04d8d2eba635e848aabfe2ddbb97836, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5174054862485452392
 GameObject:
   m_ObjectHideFlags: 0

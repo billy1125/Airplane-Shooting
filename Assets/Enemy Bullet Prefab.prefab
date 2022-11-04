@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6855807310743788361}
   - component: {fileID: 6855807310743788360}
   - component: {fileID: 6855807310743788363}
-  - component: {fileID: 7900653947732208920}
+  - component: {fileID: 2969778233673334518}
   m_Layer: 0
   m_Name: Enemy Bullet Prefab
   m_TagString: Enemy Bullet
@@ -100,7 +100,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.14
---- !u!114 &7900653947732208920
+--- !u!114 &2969778233673334518
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,7 +109,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6855807310743788365}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f616dfbbcc4e9c4da5e5fa4adcf3580, type: 3}
+  m_Script: {fileID: 11500000, guid: cdf5a40a44d7d0448a0d2f69093e8741, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ExplosionPrefab: {fileID: 1895478648524363357, guid: a469b718b6edeee46a80be90411d4916, type: 3}
+  TiltAngle: 0
+  Direct: -1

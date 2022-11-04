@@ -6,24 +6,22 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject EnemyAirplanePrefab; //戰機預置物件
     public float span = 1.0f;
     public float delta = 0;
-
-    int intScore = 0;
-    public Text ScoreText;
-
+        
+    public GameObject EnemyAirplanePrefab; //戰機預置物件
     public GameObject AirPlanePrefab; //戰機預置物件
     public GameObject StartPoint; //戰機產生的起點
-
-    public GameObject AirPlane; // 戰機物件
-
-    bool IsRestarting = false; //遊戲是不是正在重啟中？True代表遊戲正在重啟，False代表遊戲正常執行中
-
-    int LifeAmount = 2;
-    public GameObject[] LifeImage; //宣告一個公開的生命值物件陣列
-
+    public GameObject MainCamera; //宣告攝影機物件
+    public Text ScoreText;
+    public Image LifeBar;
     public GameObject GameUI; // 遊戲結束畫面
+    public GameObject[] LifeImage; //宣告一個公開的生命值物件陣列   
+        
+    GameObject AirPlane; // 戰機物件
+    int intScore = 0;
+    int LifeAmount = 2;
+    bool IsRestarting = false; //遊戲是不是正在重啟中？True代表遊戲正在重啟，False代表遊戲正常執行中
 
     // Start is called before the first frame update
     void Start()
@@ -73,6 +71,7 @@ public class GameManager : MonoBehaviour
         intScore = 0; //分數歸零
         IncreaseScore(intScore); //重新顯示分數
         AirPlane = Instantiate(AirPlanePrefab, StartPoint.transform.position, StartPoint.transform.rotation);
+        LifeBar.fillAmount = 1;
         IsRestarting = false;
     }
 
@@ -99,5 +98,11 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene("Intro");
+    }
+
+    public void MakeDamage(float _LifeAmount)
+    {
+        MainCamera.GetComponent<CameraShake>().isShake = true;
+        LifeBar.fillAmount = _LifeAmount;
     }
 }

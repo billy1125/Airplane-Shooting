@@ -87,7 +87,8 @@ MonoBehaviour:
   MoveSpeed: 3
   ExplosionPrefab: {fileID: 1895478648524363357, guid: a469b718b6edeee46a80be90411d4916, type: 3}
   EnemyBulletPrefab: {fileID: 6855807310743788365, guid: 8f2abc665f68cff4fa5dae39e0846e0f, type: 3}
-  span: 0.5
+  TiltAngle: 10
+  span: 2
   delta: 0
 --- !u!1 &5625571637574202567
 GameObject:
